@@ -25,7 +25,6 @@
     z-index: 99;
 }
 
-
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -39,7 +38,6 @@
     visibility: visible;
     opacity: 1;
 }
-
 
 /*** Button ***/
 .btn {
@@ -79,7 +77,6 @@
     font-weight: normal;
     border-radius: 2px;
 }
-
 
 /*** Navbar ***/
 .navbar-dark .navbar-nav .nav-link {
@@ -149,7 +146,6 @@
     }
 }
 
-
 /*** Hero Header ***/
 .hero-header {
     background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../img/bg-hero.jpg);
@@ -171,7 +167,6 @@
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
-
 
 /*** Section Title ***/
 .section-title {
@@ -206,7 +201,6 @@
     display: none;
 }
 
-
 /*** Service ***/
 .service-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
@@ -225,12 +219,10 @@
     color: var(--light) !important;
 }
 
-
 /*** Food Menu ***/
 .nav-pills .nav-item .active {
     border-bottom: 2px solid var(--primary);
 }
-
 
 /*** Youtube Video ***/
 .video {
@@ -349,7 +341,6 @@
     opacity: 1;
 }
 
-
 /*** Team ***/
 .team-item {
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
@@ -372,7 +363,6 @@
 .team-item .btn {
     border-radius: 38px 38px 0 0;
 }
-
 
 /*** Testimonial ***/
 .testimonial-carousel .owl-item .testimonial-item,
@@ -411,7 +401,6 @@
     background: var(--primary);
     border-color: var(--primary);
 }
-
 
 /*** Footer ***/
 .footer .btn.btn-social {
@@ -477,6 +466,7 @@
     padding-right: 0;
     border-right: none;
 }
+
 /* Menu price styling */
 .menu-prices {
     min-width: 120px; /* Ensure enough space for prices */
@@ -534,10 +524,12 @@
         margin: 0 auto;
     }
 }
+/* Gallery styling */
 .gallery-item {
     position: relative;
     overflow: hidden;
 }
+
 .gallery-caption {
     position: absolute;
     bottom: 0;
@@ -547,6 +539,21 @@
     transform: translateY(100%);
     transition: transform 0.3s ease;
 }
+
 .gallery-item:hover .gallery-caption {
     transform: translateY(0);
+}
+
+.gallery-carousel .gallery-item {
+    overflow: hidden;
+}
+
+/* Specific styling for dish names in gallery */
+.gallery-caption h5 {
+    color: white !important; /* Force white color */
+    font-family: "Pacifico", cursive; /* Attractive font */
+    font-size: 1.5rem;      /* Larger size for emphasis */
+    margin: 0;              /* Remove default margin */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Shadow for readability */
+    padding: 5px 0;         /* Add spacing */
 }

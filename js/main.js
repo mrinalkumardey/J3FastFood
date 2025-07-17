@@ -117,3 +117,24 @@
     
 })(jQuery);
 
+$(document).ready(function() {
+    new WOW().init(); // Ensure WOW animations work
+
+    $(".gallery-carousel").owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 900,  // 2-second interval
+        smartSpeed: 250,       // 1-second transition
+        items: 1,
+        dots: true,
+        loop: true,
+        nav: false,
+        responsive: {
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        }
+    });
+});

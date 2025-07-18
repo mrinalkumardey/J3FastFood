@@ -343,13 +343,16 @@
 
 /*** Team ***/
 .team-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.08);
     height: calc(100% - 38px);
     transition: .5s;
 }
 
 .team-item img {
     transition: .5s;
+    width: 100%;
+    height: auto; /* Allow natural height based on resized image */
+    object-fit: cover; /* Ensure uniform cropping */
 }
 
 .team-item:hover img {
@@ -362,6 +365,38 @@
 
 .team-item .btn {
     border-radius: 38px 38px 0 0;
+    transition: background-color 0.3s ease;
+}
+
+.team-item .btn:hover {
+    background-color: #d97a00;
+    border-color: #d97a00;
+}
+
+/* Ensure uniform size on desktop */
+@media (min-width: 992px) {
+    .team-item .rounded-circle {
+        width: 200px; /* Fixed width for circle */
+        height: 200px; /* Fixed height for circle */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .team-item img {
+        min-height: 200px; /* Minimum height to match circle */
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 991px) {
+    .team-item .rounded-circle {
+        width: 150px; /* Smaller circle on mobile */
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .team-item img {
+        min-height: 150px; /* Match mobile circle size */
+    }
 }
 
 /*** Testimonial ***/

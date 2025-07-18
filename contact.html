@@ -134,41 +134,40 @@
                     tabindex="0"></iframe>
             </div>
             <div class="col-md-6">
-                <div class="wow fadeInUp" data-wow-delay="0.2s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+    <div class="wow fadeInUp" data-wow-delay="0.2s">
+        <form action="https://formspree.io/f/meozorpg" method="POST" class="wow fadeInUp" data-wow-delay="0.2s">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" placeholder="Your WhatsApp Number" required>
+                        <label for="whatsapp">Your WhatsApp Number</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 208px" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                 </div>
             </div>
-        </div>
+            <!-- Hidden fields for Formspree -->
+            <input type="hidden" name="_subject" value="New Message from J3 Fast Food Contact Form">
+            <input type="hidden" name="_next" value="thank-you.html"> <!-- Redirect to thank-you page -->
+            <!-- Honeypot for spam protection -->
+            <div style="display: none;">
+                <label for="gotcha">Don’t fill this</label>
+                <input type="text" name="_gotcha" id="gotcha">
+            </div>
+        </form>
     </div>
 </div>
 <!-- Contact End -->
@@ -180,9 +179,9 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">J3 fAStFooD</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Reservation</a>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="contact.html">Contact Us</a>
+                        <a class="btn btn-link" href="https://wa.me/+916003633605?text=Book%20a%20table%20at%20J3%20Fast%20Food">Reservation</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
@@ -190,7 +189,7 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 6003633605</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>j3fastfood@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/j3_fast_food?igsh=M3pvNmoyZG5ydTVn"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
@@ -215,7 +214,7 @@
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Home</a>
+                                <a href="index.html">Home</a>
                             </div>
                         </div>
                     </div>
